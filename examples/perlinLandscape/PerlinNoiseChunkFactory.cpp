@@ -4,6 +4,8 @@
 #include "IChunkManager.h"
 #include "Voxels.h"
 
+
+
 PerlinNoiseChunkFactory::PerlinNoiseChunkFactory(unsigned int octaves,
 	double persistence) : _perlinNoise(std::make_shared<PerlinNoise>()), _octaves(octaves), _persistence(persistence)
 {
@@ -23,7 +25,8 @@ PerlinNoiseChunkFactory::~PerlinNoiseChunkFactory()
 
 std::shared_ptr<IChunk> PerlinNoiseChunkFactory::construct(const IChunkManager* chunkManager, unsigned chunkX, unsigned chunkY, unsigned chunkZ)
 {
-	std::vector<std::shared_ptr<IVoxel>> voxels;
+	std::cout << __FUNCTION__ << std::endl;
+std::vector<std::shared_ptr<IVoxel>> voxels;	
 	unsigned noiseValues[IChunk::Width][IChunk::Height];
 
 	for (unsigned z=0; z < IChunk::Depth; z++)
@@ -65,6 +68,10 @@ std::shared_ptr<IChunk> PerlinNoiseChunkFactory::construct(const IChunkManager* 
 					{
 						voxel = std::make_shared<MountainVoxel>();
 					}
+					else if (worldY == 15)
+					{
+						voxel = std::make_shared<WoodVoxel>();
+					}
 					else
 					{
 						voxel = std::make_shared<GrassVoxel>();
@@ -80,6 +87,24 @@ std::shared_ptr<IChunk> PerlinNoiseChunkFactory::construct(const IChunkManager* 
 		}
 	}
 
-	std::shared_ptr<IChunk> chunk = std::make_shared<Chunk>(voxels);
+	chunk = std::make_shared<Chunk>(voxels);
 	return chunk;
+}
+
+
+void PerlinNoiseChunkFactory::random_remove()
+{
+	
+	std::uniform_int_distribution<int> distribution(0, chunk->getContainerWidthInVoxels()-1);
+	auto dice = std::bind(distribution, generator);
+
+	auto x = rand() % chunk->getContainerWidthInVoxels();
+	auto y = rand() % chunk->getContainerDepthInVoxels();
+	auto z = rand() % chunk->getContainerHeightInVoxels();
+	std::cout << "Removing " << x << "\t" << y << "\t"<< z << "\t" << std::endl;
+	chunk->getVoxel(x,y,z)->setActive(false);
+	
+	//voxels.at(mean)->setActive(false);
+
+
 }

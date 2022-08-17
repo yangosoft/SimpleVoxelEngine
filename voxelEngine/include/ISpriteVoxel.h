@@ -8,4 +8,5 @@ public:
 	virtual ~ISpriteVoxel() = default;
 	virtual void setColor(color color) = 0;	
 	virtual void setIsActive(bool isActive) = 0;
+	virtual void setActive(bool isActive) = 0;
 };

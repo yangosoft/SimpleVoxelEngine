@@ -15,6 +15,8 @@ public:
 	};
 
 	bool getIsActive() const override { return true; }
+
+	void setActive(bool active) override { };
 };
 
 class RgbVoxel : public IVoxel
@@ -27,4 +29,6 @@ public:
 	color getColor() const override { return _color; }
 
 	bool getIsActive() const override { return true; }
+
+	void setActive(bool active) override { };
 };

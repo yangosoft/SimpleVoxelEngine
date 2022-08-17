@@ -214,3 +214,4 @@ std::shared_ptr<ISprite> ISprite::load(const std::vector<std::string>& spriteFra
 	voxelSprite->setType(type);
 	return voxelSprite;
 }
+

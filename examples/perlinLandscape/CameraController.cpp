@@ -36,16 +36,16 @@ void CameraController::update(float timeDelta)
 	_leftThumbStickDelta = controllerDelta(_mouseSpeed * float(windowWidth / 2 - xpos), _mouseSpeed * float(windowHeight / 2 - ypos));
 
 	float rightX = 0, rightY = 0;
-	if (glfwGetKey(_window, GLFW_KEY_UP) == GLFW_PRESS)
+	if ((glfwGetKey(_window, GLFW_KEY_UP) == GLFW_PRESS) || (glfwGetKey(_window, GLFW_KEY_W) == GLFW_PRESS))
 	{
 		rightY = _keyboardSpeed * timeDelta;
-	}else if (glfwGetKey(_window, GLFW_KEY_DOWN) == GLFW_PRESS)
+	}else if ((glfwGetKey(_window, GLFW_KEY_DOWN) == GLFW_PRESS) || (glfwGetKey(_window, GLFW_KEY_S) == GLFW_PRESS))
 	{
 		rightY = -_keyboardSpeed * timeDelta;
-	}else if (glfwGetKey(_window, GLFW_KEY_LEFT) == GLFW_PRESS)
+	}else if ((glfwGetKey(_window, GLFW_KEY_LEFT) == GLFW_PRESS) || (glfwGetKey(_window, GLFW_KEY_A) == GLFW_PRESS))
 	{
 		rightX = _keyboardSpeed * timeDelta;
-	}else if (glfwGetKey(_window, GLFW_KEY_RIGHT) == GLFW_PRESS)
+	}else if ((glfwGetKey(_window, GLFW_KEY_RIGHT) == GLFW_PRESS) || (glfwGetKey(_window, GLFW_KEY_D) == GLFW_PRESS))
 	{
 		rightX = -_keyboardSpeed * timeDelta;
 	}else if (glfwGetKey(_window, GLFW_KEY_SPACE) == GLFW_PRESS)

@@ -18,5 +18,7 @@ public:
 	color getColor() const override { return _type == 0 ? color(0.1f, 0.1f, 0.1f) : color(0.9f, 0.9f, 0.9f); }
 
 	bool getIsActive() const override { return true; }
+
+	void setActive(bool active) override {}
 };
 

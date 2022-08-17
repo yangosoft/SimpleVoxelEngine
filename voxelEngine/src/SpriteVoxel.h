@@ -20,5 +20,6 @@ public:
 
 	bool getIsActive() const override { return _isActive; }
 	void setIsActive(bool isActive) override { _isActive = isActive; }
+	void setActive(bool isActive) override { _isActive = isActive; };
 };
 

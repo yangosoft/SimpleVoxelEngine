@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
 	} 
 
 	// Configure the voxel engine to display voxels based on a perlin noise algorithm and connect the camera to the mouse and keyboard
-	std::shared_ptr<IChunkFactory> chunkFactory = std::make_shared<PerlinNoiseChunkFactory>(4, 3); // 6,3 will give a much spikier terrain
+	std::shared_ptr<PerlinNoiseChunkFactory> chunkFactory = std::make_shared<PerlinNoiseChunkFactory>(4, 3); // 6,3 will give a much spikier terrain
 	std::shared_ptr<ICameraControllerInput> cameraInputController = std::make_shared<CameraController>(window);
 	std::shared_ptr<ILightSource> light = std::make_shared<SimpleLight>(lightSourcePosition(6.0f * IChunk::Width, 200.0f, 6.0f * IChunk::Depth), color(0.7f, 0.7f, 0.7f), 30000.0f);
 	std::shared_ptr<VoxelEngine> voxelEngine = std::make_shared<VoxelEngine>(window,
@@ -38,7 +38,14 @@ int main(int argc, char** argv) {
 	do {
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		voxelEngine->tick();
+		voxelEngine->tick([&](float timeDelta)
+		{
+			if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
+			{ chunkFactory->random_remove();}
+
+		});
+
+		
 
 		// Swap buffers
 		glfwSwapBuffers(window);

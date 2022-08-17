@@ -9,5 +9,6 @@ public:
 	virtual ~IVoxel() = default;
 	virtual color getColor() const = 0;
 	virtual bool getIsActive() const = 0;
+	virtual void setActive(bool active) = 0;
 	static const std::shared_ptr<IVoxel>& nullVoxel;
 };
