@@ -4,9 +4,10 @@
 #include "PerlinNoiseChunkFactory.h"
 #include "MouseAndKeyboardCameraControllerInput.h"
 #include "SimpleLight.h"
-
+#include "CameraController.hpp"
 #include <glm/glm.hpp>
 #include <stdio.h>
+#include <iostream>
 
 bool setupEnvironment(GLFWwindow*& window);
 static void error_callback(int error, const char* description);
@@ -16,12 +17,15 @@ int main(int argc, char** argv) {
 	size_t lastSlash = programPath.find_last_of('\\');
 	std::string shaderPath = "shaders/";
 
-	GLFWwindow* window;
-	if (setupEnvironment(window)) return -1;
+	GLFWwindow* window = nullptr;
+	if (setupEnvironment(window))
+	{
+		return -1;
+	} 
 
 	// Configure the voxel engine to display voxels based on a perlin noise algorithm and connect the camera to the mouse and keyboard
 	std::shared_ptr<IChunkFactory> chunkFactory = std::make_shared<PerlinNoiseChunkFactory>(4, 3); // 6,3 will give a much spikier terrain
-	std::shared_ptr<ICameraControllerInput> cameraInputController = std::make_shared<MouseAndKeyboardCameraControllerInput>(window);
+	std::shared_ptr<ICameraControllerInput> cameraInputController = std::make_shared<CameraController>(window);
 	std::shared_ptr<ILightSource> light = std::make_shared<SimpleLight>(lightSourcePosition(6.0f * IChunk::Width, 200.0f, 6.0f * IChunk::Depth), color(0.7f, 0.7f, 0.7f), 30000.0f);
 	std::shared_ptr<VoxelEngine> voxelEngine = std::make_shared<VoxelEngine>(window,
 		shaderPath,
@@ -39,6 +43,16 @@ int main(int argc, char** argv) {
 		// Swap buffers
 		glfwSwapBuffers(window);
 		glfwPollEvents();
+
+		if ( GLFW_PRESS == glfwGetMouseButton(window,0))
+		{
+			double posx, posy;
+			glfwGetCursorPos(window, &posx, &posy);
+			std::cout << posx << "," << posy << std::endl;
+		}
+		
+
+		
 
 	} // Check if the ESC key was pressed or the window was closed
 	while (glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS && glfwWindowShouldClose(window) == 0);

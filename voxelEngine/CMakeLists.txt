@@ -76,4 +76,4 @@ include/worldSize.h
 
 target_include_directories(voxelengine PRIVATE include/ ../depends/include/ src/)
 
-
+set(SHADERS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/" CACHE STRING "PATH to shaders")

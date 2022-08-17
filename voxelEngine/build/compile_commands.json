@@ -1,0 +1,92 @@
+[
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/AABBTree.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/AABBTree.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/AABBTree.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/BehaviourFactory.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/BehaviourFactory.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/BehaviourFactory.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/Camera.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/Camera.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/Camera.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/Chunk.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/Chunk.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/Chunk.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/ChunkManager.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/ChunkManager.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/ChunkManager.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/Controls.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/Controls.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/Controls.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/ISprite.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/ISprite.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/ISprite.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/IVoxel.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/IVoxel.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/IVoxel.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/MouseAndKeyboardCameraControllerInput.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/MouseAndKeyboardCameraControllerInput.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/MouseAndKeyboardCameraControllerInput.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/ShaderManager.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/ShaderManager.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/ShaderManager.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/SpriteManager.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/SpriteManager.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/SpriteManager.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/UniformChunk.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/UniformChunk.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/UniformChunk.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/VoxelContainerGeometry.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/VoxelContainerGeometry.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/VoxelContainerGeometry.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/VoxelEngine.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/VoxelEngine.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/VoxelEngine.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/VoxelGeometry.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/VoxelGeometry.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/VoxelGeometry.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/VoxelRenderer.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/VoxelRenderer.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/VoxelRenderer.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/VoxelSprite.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/VoxelSprite.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/VoxelSprite.cpp"
+},
+{
+  "directory": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build",
+  "command": "/usr/bin/c++ -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/../depends/include -I/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src -g -o CMakeFiles/voxelengine.dir/src/behaviours/VoxelatedConstructionSpriteBehaviour.cpp.o -c /media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/behaviours/VoxelatedConstructionSpriteBehaviour.cpp",
+  "file": "/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/src/behaviours/VoxelatedConstructionSpriteBehaviour.cpp"
+}
+]

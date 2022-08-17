@@ -105,9 +105,9 @@ void VoxelRenderer::render(const ICamera& camera, const VoxelContainerGeometry& 
 		GLuint lightPowerID = glGetUniformLocation(shaderId, "LightPower");
 		GLuint lightColorID = glGetUniformLocation(shaderId, "LightColor");
 
-		std::cout << "glUseProgram" << std::endl;
+		//std::cout << "glUseProgram" << std::endl;
 		glUseProgram(shaderId);
-std::cout << "~glUseProgram" << std::endl;
+//std::cout << "~glUseProgram" << std::endl;
 		// camera
 		glm::mat4 ProjectionMatrix = camera.getProjectionMatrix();
 		glm::mat4 ViewMatrix = camera.getViewMatrix();
@@ -169,9 +169,9 @@ std::cout << "~glUseProgram" << std::endl;
 			0,
 			(void*)0
 		);
-std::cout << "glDrawArrays" << std::endl;
+//std::cout << "glDrawArrays" << std::endl;
 		glDrawArrays(GL_TRIANGLES, 0, _numberOfVertices);
-		std::cout << "~glDrawArrays" << std::endl;
+		//std::cout << "~glDrawArrays" << std::endl;
 		glDisableVertexAttribArray(0);
 		glDisableVertexAttribArray(1);
 	}

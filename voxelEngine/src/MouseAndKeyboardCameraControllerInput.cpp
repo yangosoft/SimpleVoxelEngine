@@ -39,18 +39,18 @@ void MouseAndKeyboardCameraControllerInput::update(float timeDelta)
 	if (glfwGetKey(_window, GLFW_KEY_UP) == GLFW_PRESS)
 	{
 		rightY = _keyboardSpeed * timeDelta;
-	}
-	if (glfwGetKey(_window, GLFW_KEY_DOWN) == GLFW_PRESS)
+	}else if (glfwGetKey(_window, GLFW_KEY_DOWN) == GLFW_PRESS)
 	{
 		rightY = -_keyboardSpeed * timeDelta;
-	}
-	if (glfwGetKey(_window, GLFW_KEY_LEFT) == GLFW_PRESS)
+	}else if (glfwGetKey(_window, GLFW_KEY_LEFT) == GLFW_PRESS)
 	{
 		rightX = _keyboardSpeed * timeDelta;
-	}
-	if (glfwGetKey(_window, GLFW_KEY_RIGHT) == GLFW_PRESS)
+	}else if (glfwGetKey(_window, GLFW_KEY_RIGHT) == GLFW_PRESS)
 	{
 		rightX = -_keyboardSpeed * timeDelta;
+	}else if (glfwGetKey(_window, GLFW_KEY_SPACE) == GLFW_PRESS)
+	{
+		rightY = -_keyboardSpeed * timeDelta;
 	}
 	_rightThumbStickDelta = controllerDelta(rightX, rightY);
 }
