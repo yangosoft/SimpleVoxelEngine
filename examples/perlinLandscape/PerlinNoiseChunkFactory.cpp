@@ -88,22 +88,68 @@ std::vector<std::shared_ptr<IVoxel>> voxels;
 	}
 
 	chunk = std::make_shared<Chunk>(voxels);
+	this->chunkManager = chunkManager;
 	return chunk;
+}
+
+
+
+
+void PerlinNoiseChunkFactory::random_add()
+{
+	if (chunkManager == nullptr)
+	{
+		return;
+	}
+
+	if (chunk == nullptr)
+	{
+		return;
+	}
+	
+	std::uniform_int_distribution<int> distribution(0, chunk->getContainerWidthInVoxels()-1);
+	auto dice = std::bind(distribution, generator);
+
+	auto x = rand() % chunk->Width;
+	auto z = rand() % chunk->Depth;
+	auto y = rand() % chunk->Height;
+	if(chunk->getVoxel(x,y,z) == nullptr)
+	{
+			std::cout << "Adding " << x << "\t" << y << "\t"<< z << "\t" << std::endl;
+		auto voxel = std::make_shared<WoodVoxel>();
+		chunk->getVoxel(x,y,z) = voxel;
+		chunk->prepareRenderer();	
+	}
+
 }
 
 
 void PerlinNoiseChunkFactory::random_remove()
 {
+	if (chunkManager == nullptr)
+	{
+		return;
+	}
+
+	if (chunk == nullptr)
+	{
+		return;
+	}
 	
 	std::uniform_int_distribution<int> distribution(0, chunk->getContainerWidthInVoxels()-1);
 	auto dice = std::bind(distribution, generator);
 
-	auto x = rand() % chunk->getContainerWidthInVoxels();
-	auto y = rand() % chunk->getContainerDepthInVoxels();
-	auto z = rand() % chunk->getContainerHeightInVoxels();
-	std::cout << "Removing " << x << "\t" << y << "\t"<< z << "\t" << std::endl;
-	chunk->getVoxel(x,y,z)->setActive(false);
-	
+	auto x = rand() % chunk->Width;
+	auto z = rand() % chunk->Depth;
+	auto y = rand() % chunk->Height;
+
+	if(chunk->getVoxel(x,y,z))
+	{
+			std::cout << "Removing " << x << "\t" << y << "\t"<< z << "\t" << std::endl;
+		chunk->getVoxel(x,y,z)->setActive(false);
+		chunk->tick(30);
+		chunk->prepareRenderer();
+	}
 	//voxels.at(mean)->setActive(false);
 
 

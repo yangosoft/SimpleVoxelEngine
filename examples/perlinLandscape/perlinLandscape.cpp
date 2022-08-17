@@ -29,9 +29,9 @@ int main(int argc, char** argv) {
 	std::shared_ptr<ILightSource> light = std::make_shared<SimpleLight>(lightSourcePosition(6.0f * IChunk::Width, 200.0f, 6.0f * IChunk::Depth), color(0.7f, 0.7f, 0.7f), 30000.0f);
 	std::shared_ptr<VoxelEngine> voxelEngine = std::make_shared<VoxelEngine>(window,
 		shaderPath,
-		worldSize(18 * IChunk::Width, 2 * IChunk::Height, 18 * IChunk::Depth),
+		worldSize(/*18 * */ IChunk::Width, /*2 * */IChunk::Height, /*18 * */ IChunk::Depth),
 		chunkFactory,
-		cameraConfiguration(5*IChunk::Width, 60.0f, 5 * IChunk::Depth, 45.0f, -1.0f, 60.0f, 800.0f),
+		cameraConfiguration(/*5 * */IChunk::Width, 60.0f, /*5 * */ IChunk::Depth, 45.0f, -1.0f, 60.0f, 800.0f),
 		cameraInputController,
 		light);
 
@@ -41,26 +41,21 @@ int main(int argc, char** argv) {
 		voxelEngine->tick([&](float timeDelta)
 		{
 			if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
-			{ chunkFactory->random_remove();}
-
+			{ chunkFactory->random_remove(); }
+			if (glfwGetKey(window, GLFW_KEY_T) == GLFW_PRESS)
+			{ chunkFactory->random_add(); }
 		});
-
-		
 
 		// Swap buffers
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 
-		if ( GLFW_PRESS == glfwGetMouseButton(window,0))
+		if (GLFW_PRESS == glfwGetMouseButton(window,0))
 		{
 			double posx, posy;
 			glfwGetCursorPos(window, &posx, &posy);
 			std::cout << posx << "," << posy << std::endl;
 		}
-		
-
-		
-
 	} // Check if the ESC key was pressed or the window was closed
 	while (glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS && glfwWindowShouldClose(window) == 0);
 
@@ -76,7 +71,7 @@ bool setupEnvironment(GLFWwindow*& window)
 	}
 
 	glfwSetErrorCallback(error_callback);
-	glfwWindowHint(GLFW_SAMPLES, 4); // 4x antialiasing
+	glfwWindowHint(GLFW_SAMPLES, 0); // 4x antialiasing
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); // We want OpenGL 3.3
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
