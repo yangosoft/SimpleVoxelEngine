@@ -1,3 +1,0 @@
-/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build/CMakeFiles/voxelengine.dir
-/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build/CMakeFiles/edit_cache.dir
-/media/yango/b51297a7-7d87-4391-aa0c-309ec692fb35/opt/SimpleVoxelEngine/voxelEngine/build/CMakeFiles/rebuild_cache.dir
