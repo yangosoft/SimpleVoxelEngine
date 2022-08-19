@@ -4,6 +4,7 @@
 #include "PerlinNoiseChunkFactory.h"
 #include "MouseAndKeyboardCameraControllerInput.h"
 #include "SimpleLight.h"
+#include "ChunkManager.h"
 #include "CameraController.hpp"
 #include <glm/glm.hpp>
 #include <stdio.h>
@@ -22,14 +23,18 @@ int main(int argc, char** argv) {
 	{
 		return -1;
 	} 
+	auto wSize = worldSize(/*18 * */ IChunk::Width, /*2 * */IChunk::Height, /*18 * */ IChunk::Depth);
+	
 
 	// Configure the voxel engine to display voxels based on a perlin noise algorithm and connect the camera to the mouse and keyboard
 	std::shared_ptr<PerlinNoiseChunkFactory> chunkFactory = std::make_shared<PerlinNoiseChunkFactory>(4, 3); // 6,3 will give a much spikier terrain
+	auto chunkManager =  std::make_shared<ChunkManager>(chunkFactory, wSize.voxelsWide/IChunk::Width, wSize.voxelsHigh/IChunk::Height, wSize.voxelsDeep/IChunk::Depth);
 	std::shared_ptr<ICameraControllerInput> cameraInputController = std::make_shared<CameraController>(window);
 	std::shared_ptr<ILightSource> light = std::make_shared<SimpleLight>(lightSourcePosition(6.0f * IChunk::Width, 200.0f, 6.0f * IChunk::Depth), color(0.7f, 0.7f, 0.7f), 30000.0f);
-	std::shared_ptr<VoxelEngine> voxelEngine = std::make_shared<VoxelEngine>(window,
+	VoxelEngine voxelEngine(window,
 		shaderPath,
-		worldSize(/*18 * */ IChunk::Width, /*2 * */IChunk::Height, /*18 * */ IChunk::Depth),
+		wSize,
+		chunkManager,
 		chunkFactory,
 		cameraConfiguration(/*5 * */IChunk::Width, 60.0f, /*5 * */ IChunk::Depth, 45.0f, -1.0f, 60.0f, 800.0f),
 		cameraInputController,
@@ -38,7 +43,7 @@ int main(int argc, char** argv) {
 	do {
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		voxelEngine->tick([&](float timeDelta)
+		voxelEngine.tick([&](float timeDelta)
 		{
 			if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
 			{ chunkFactory->random_remove(); }

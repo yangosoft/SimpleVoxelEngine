@@ -12,12 +12,13 @@
 VoxelEngine::VoxelEngine(GLFWwindow* window,
 	std::string shaderPath,
 	const worldSize& worldSize,
+	const std::shared_ptr<IChunkManager>& chunkManager,
 	const std::shared_ptr<IChunkFactory>& chunkFactory,
 	const cameraConfiguration& cameraConfiguration,
 	const std::shared_ptr<ICameraControllerInput>& cameraInputController,
 	const std::shared_ptr<ILightSource>& lightSource) :
 		_window(window),
-		_chunkManager(chunkFactory == nullptr ? nullptr : std::make_shared<ChunkManager>(chunkFactory, worldSize.voxelsWide/IChunk::Width, worldSize.voxelsHigh/IChunk::Height, worldSize.voxelsDeep/IChunk::Depth)),
+		_chunkManager(chunkManager),
 		_camera(std::make_shared<Camera>(cameraConfiguration.x, cameraConfiguration.y, cameraConfiguration.z, cameraConfiguration.horizontalAngle, cameraConfiguration.verticalAngle, cameraConfiguration.fieldOfView, cameraConfiguration.range, cameraConfiguration.ratio)),
 		_cameraInputController(cameraInputController != nullptr ? cameraInputController : std::make_shared<NullCameraController>()),
 		_lightSource(lightSource),
@@ -25,6 +26,10 @@ VoxelEngine::VoxelEngine(GLFWwindow* window,
 		_lastTickTime(-1)
 {
 	ShaderManager::init(shaderPath);
+	if (_chunkManager == nullptr)
+	{
+		_chunkManager = (chunkFactory == nullptr ? nullptr : std::make_shared<ChunkManager>(chunkFactory, worldSize.voxelsWide/IChunk::Width, worldSize.voxelsHigh/IChunk::Height, worldSize.voxelsDeep/IChunk::Depth));
+	}
 }
 
 VoxelEngine::~VoxelEngine()

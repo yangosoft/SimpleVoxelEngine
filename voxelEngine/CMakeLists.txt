@@ -13,7 +13,6 @@ src/Camera.cpp
 src/Camera.h
 src/Chunk.cpp
 src/ChunkManager.cpp
-src/ChunkManager.h
 src/Controls.cpp
 src/Controls.hpp
 src/FrameCounter.h
